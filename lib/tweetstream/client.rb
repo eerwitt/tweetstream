@@ -439,7 +439,8 @@ module TweetStream
 
     # Terminate the currently running TweetStream and close EventMachine loop
     def stop
-      EventMachine.stop_event_loop
+      #EventMachine.stop_event_loop
+      @timer.cancel
       @last_status
     end
 
